@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding-top: 100px;
+}
+$carousel_width: 70vw; //custom : in px or vw/vh please!
+$carousel_height: 350px; //custom : in px or vw/vh please!
+$carousel_item_width: $carousel_width/5; //20%
+$carousel_item_height: $carousel_height - $carousel_height * 0.2;
+.carousel {
+    width: 100%;
+    // border: 1px solid rgba(78, 78, 78, 0.404);
+    // height: $carousel_height;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .carousel-items {
+        overflow: hidden;
+        border: 1px solid greenyellow;
+        position: relative;
+        width: $carousel_width;
+        height: $carousel_height;
+        .carousel-item {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: 270ms;
+            width: $carousel_item_width;
+            height: $carousel_item_height;
+            background-color: sandybrown;
+            &.active {
+                width: $carousel_item_width + $carousel_item_width*0.5;
+                height: $carousel_item_height + ($carousel_height - $carousel_item_height);
+            }
+        }
+    }
+    .carousel-items-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translate(0%, -50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: chartreuse;
+        cursor: pointer;
+        &.arrow-prev {
+            left: 0px;
+        }
+        &.arrow-next {
+            right: 0px;
+        }
+    }
+}
