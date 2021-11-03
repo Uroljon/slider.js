@@ -1,5 +1,5 @@
-## This is a Slider !
-# or Carousel, whatever you call :)
+# This is a Slider !
+## or Carousel, whatever you call :)
 - made in pure CSS and JS
 - easy-to-use code snippets
 
